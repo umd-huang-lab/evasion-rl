@@ -112,13 +112,14 @@
         </thead>
           <tbody>
           <tr>
-          <td align="center"><strong>Hopper</strong>, <em>PPO</em> <br> clean reward: <strong>21</strong> <br> (agent: right paddle)</td>
-          <td align="center"><strong>Hopper</strong>, <em>PPO</em> <br> reward under strongest <br> previous attack: <strong>-5</strong> <br></td>
-          <td align="center"><strong>Hopper</strong>, <em>PPO</em> <br> reward under our <br> PA-AD attack: <strong>-21</strong> <br></td>
-          <td align="center"><strong>Walker</strong>, <em>PPO</em> <br> clean reward: <strong>94</strong> <br>(agent: left boxer)</td>
-          <td align="center"><strong>Walker</strong>, <em>PPO</em> <br> reward under strongest <br> previous attack: <strong>69</strong> <br></td>
-          <td align="center"><strong>Walker</strong>, <em>PPO</em> <br> reward under our <br> PA-AD attack: <strong>8</strong> <br></td>
+          <td align="center"><strong>Hopper</strong>, <em>PPO</em> <br> clean reward: <strong>3104</strong> <br></td>
+          <td align="center"><strong>Hopper</strong>, <em>PPO</em> <br> reward under strongest <br> previous attack: <strong>636</strong> <br></td>
+          <td align="center"><strong>Hopper</strong>, <em>PPO</em> <br> reward under our <br> PA-AD attack: <strong>171</strong> <br></td>
+          <td align="center"><strong>Walker</strong>, <em>PPO</em> <br> clean reward: <strong>4630</strong> <br></td>
+          <td align="center"><strong>Walker</strong>, <em>PPO</em> <br> reward under strongest <br> previous attack: <strong>1048</strong> <br></td>
+          <td align="center"><strong>Walker</strong>, <em>PPO</em> <br> reward under our <br> PA-AD attack: <strong>813</strong> <br></td>
           </tr>
+        <tr> </tr><tr> </tr>
         <tr>
         <td align="center"><img src="PongNoFrameskip-v4_None.gif" alt="Pong-attack-natural.gif" style="width:60%;"></a></th>
         <td align="center"><img src="PongNoFrameskip-v4_minbest.gif" alt="Pong-attack-natural.gif" style="width:60%;"></a></th>
@@ -129,7 +130,7 @@
         </tr>
         <tr>
         <td align="center"><strong>Pong</strong>, <em>DQN</em> <br> clean reward: <strong>21</strong> <br> (agent: right paddle)</td>
-        <td align="center"><strong>Pong</strong>, <em>DQN</em> <br> reward under strongest <br> previous attack: <strong>-5</strong> <br></td>
+        <td align="center"><strong>Pong</strong>, <em>DQN</em> <br> reward under strongest <br> previous attack: <strong>-14</strong> <br></td>
         <td align="center"><strong>Pong</strong>, <em>DQN</em> <br> reward under our <br> PA-AD attack: <strong>-21</strong> <br></td>
         <td align="center"><strong>Boxing</strong>, <em>DQN</em> <br> clean reward: <strong>94</strong> <br>(agent: left boxer)</td>
         <td align="center"><strong>Boxing</strong>, <em>DQN</em> <br> reward under strongest <br> previous attack: <strong>69</strong> <br></td>
@@ -140,7 +141,7 @@
     </center>
       </div>
     </div>
-  </div><br>
+  </div><br><br><br>
 
 
 
@@ -181,7 +182,7 @@
         Yongyuan Liang </a>,
         Furong Huang </a><br>
 
-        <i><font color="black">Under Review</font></i><br>
+        <i><font color="black"> </font></i><br>
         <a target="_blank" href="https://arxiv.org/abs/2106.05087">[Paper]</a>&nbsp;
         <a target="_blank" href="">[Code]</a>&nbsp;
         <!-- <a target="_blank" href="">[Talk]</a>&nbsp; -->
@@ -217,7 +218,7 @@
       from choosing the best action (<b>MinBest</b>). Or at every step, find a perturbation that cause the action distribution to have the largest KL divergence from the original
       distribution (<b>MaxDiff</b>). Heuristic Attack is often fast to compute and works decently well in practice, but it has no optimality guarantee.</li>
       <li><b>RL-based attack</b>: <a href=https://arxiv.org/pdf/2101.08452.pdf>Zhang et al.</a> establish the theory that learning optimal attacker in RL corresponds to learning
-      an optimal policy in an adversary-induced MDP. Based on this insight, they uses an end-to-end RL formulation to learn the optimal state adversary policy. However, because
+      an optimal policy in an adversary-induced MDP. Based on this insight, they use an end-to-end RL formulation to learn the optimal state adversary policy. However, because
       both the state and action space of the attacker's policy have the same size as the state space of the original environment, it becomes intractable when the original environments
       has a large state space, such as image space in Atari Games.  </li>
   </ul>
@@ -241,7 +242,7 @@
     Here is a comparison of PA-AD against existing attacking methods on seven Atari Games and four MuJoco tasks.
     We compute the average episode rewards plus/minus standard deviation of vanilla DQN and A2C or PPO agents under different evasion
 attack methods
-      <center><img class="img-responsive img-rounded" src="Atari.PNG" style="width:80%; height:80%" alt=""></center>
+      <center><img class="img-responsive img-rounded" src="./atari.PNG" style="width:80%; height:80%" alt=""></center>
       <!--<center><figcaption><h1 style="font-size:1vw"> Comparison of PA-AD against existing attacking methods on Atari Games:<br> Average episode rewards ± standard deviation of vanilla DQN and A2C agents<br> under different evasion
 attack methods </figcaption><br></center>-->
     Here, we have the comparison of PA-AD attacks against other existing
